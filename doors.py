@@ -12,7 +12,7 @@ def open_(port):
     GPIO.output(port, GPIO.LOW)
     
 def warning_(port):
-    print "Open door in port ",port
+    print "Warning bell or led in port ",port
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(port, GPIO.OUT)
     GPIO.output(port, GPIO.HIGH)
