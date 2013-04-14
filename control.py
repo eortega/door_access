@@ -2,7 +2,7 @@
 
 import sys
 from request import verify_customer
-
+import doors as DOORS
 
 if len(sys.argv) == 3:
     response=  verify_customer("url", sys.argv[2])
@@ -11,11 +11,11 @@ if len(sys.argv) == 3:
 
     if(response):
         if(response['status']== True):
-            print 'Abrir la puerta'
+            DOORS.open_(25)
         else:
-            print 'rojito de no  puede pasar'
+            DOORS.warning_(24)
     else:
-        print 'Encender el rojito de no puede pasar'
+        DOORS.warning_(24)
 
 else:
     print 'Parametros insuficientes'
